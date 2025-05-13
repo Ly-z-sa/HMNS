@@ -3,23 +3,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Home - Hotel App</title>
+  <title>Dashboard - Hotel App</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #1e1e1e;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px 16px;
+    }
+    th {
+      background-color: #222;
+      font-size: 1.1rem;
+    }
+    tr:nth-child(even) {
+      background-color: #2c2c2c;
+    }
+    .tag {
+      background-color: #333;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <h1>🏨 Hotel Dashboard</h1>
-    <button onclick="logout()">Logout</button>
-  </nav>
-
-  <div class="nav-grid">
-    <a href="rooms.html">Rooms</a>
-    <a href="guests.html">Guests</a>
-    <a href="maintenance.html">Room Maintenance</a>
-    <a href="coupons.html">Coupons</a>
-    <a href="report.html">Report</a>
-  </div>
-
-  <script src="auth.js"></script>
+  <h1>Hotel Management System Overview</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Page</th>
+        <th>What It Does</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="tag">Rooms</span></td>
+        <td>Add/view/filter rooms</td>
+      </tr>
+      <tr>
+        <td><span class="tag">Guests</span></td>
+        <td>Check-in/check-out/search guests</td>
+      </tr>
+      <tr>
+        <td><span class="tag">Room Maintenance</span></td>
+        <td>Mark room as under/clear maintenance</td>
+      </tr>
+      <tr>
+        <td><span class="tag">Coupons</span></td>
+        <td>View/add/remove coupon codes</td>
+      </tr>
+      <tr>
+        <td><span class="tag">Report</span></td>
+        <td>View stay history, guest summary, income report</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
